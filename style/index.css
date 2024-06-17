@@ -1,0 +1,19 @@
+.product-card {
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform .2s; /* Animation */
+}
+.product-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+.product-img {
+    height: 200px;
+    object-fit: cover; /* Makes images cover the area, and be clipped to fit */
+}
+.price {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
