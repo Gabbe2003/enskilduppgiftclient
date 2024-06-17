@@ -1,9 +1,7 @@
 <?php
-// Check if a product ID is provided and handle the GET request to populate the form
 if (isset($_GET['productId'])) {
     $productId = $_GET['productId'];
 
-    // Initialize cURL to fetch product details
     $curl = curl_init();
     curl_setopt_array($curl, [
         CURLOPT_URL => "http://localhost:9000/getOneProduct/" . $productId,
@@ -37,7 +35,6 @@ if (isset($_GET['productId'])) {
     exit;
 }
 
-// Handle the POST request to update the product
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
         'name' => $_POST['name'],

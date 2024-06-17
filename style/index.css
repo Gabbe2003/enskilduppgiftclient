@@ -2,14 +2,14 @@
     border: 1px solid #e3e3e3;
     border-radius: 5px;
     margin-bottom: 20px;
-    transition: transform .2s; /* Animation */
+    transition: transform .2s;
 }
 .product-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05); 
 }
 .product-img {
     height: 200px;
-    object-fit: cover; /* Makes images cover the area, and be clipped to fit */
+    object-fit: cover; 
 }
 .price {
     color: #007BFF;

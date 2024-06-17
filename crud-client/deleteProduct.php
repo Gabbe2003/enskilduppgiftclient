@@ -6,7 +6,6 @@
     if (isset($_GET['productId'])) {
         $productId = $_GET['productId'];
 
-        // Initialize cURL session to send a DELETE request
         $curl = curl_init();
         curl_setopt_array($curl, [
             CURLOPT_URL => "http://localhost:9000/deleteProduct/" . $productId,
@@ -19,12 +18,10 @@
             ],
         ]);
 
-        // Execute cURL session
         $response = curl_exec($curl);
         $err = curl_error($curl);
         curl_close($curl);
 
-        // Check for errors and handle the response
         if ($err) {
             echo  $err;
         } else {

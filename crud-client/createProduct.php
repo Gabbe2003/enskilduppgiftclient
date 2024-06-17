@@ -1,12 +1,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Capture data from the form
     $name = $_POST['name'];
     $description = $_POST['description'] ?? 'No description is availble'; 
     $price = floatval($_POST['price']);
     $imageUrl = $_POST['imageUrl'] ?? '';
 
-    // Data array
     $data = [
         'name' => $name,
         'description' => $description,
@@ -14,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'imageUrl' => $imageUrl
     ];
 
-    // Initialize cURL session
     $curl = curl_init();
 
     curl_setopt_array($curl, [
